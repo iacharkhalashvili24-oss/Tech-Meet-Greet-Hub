@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Meet & Greet Hub | მომავლის კოდი</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tech Meet & Greet Hub</h1>
+      <p>შექმნილია გუნდ „მომავლის კოდის“ მიერ 🚀</p>
+      <p>
+        <a
+          href="admin.html"
+          style="color: #38bdf8; text-decoration: none; font-size: 0.9rem"
+          >⚙️ ადმინ პანელში გადასვლა</a
+        >
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- ფილტრების ვიზუალური UI -->
+      <section class="filters">
+        <button class="filter-btn active" data-filter="all">ყველა</button>
+        <button class="filter-btn" data-filter="ჰაკათონი">ჰაკათონი</button>
+        <button class="filter-btn" data-filter="ვორქშოფი">ვორქშოფი</button>
+        <button class="filter-btn" data-filter="კონფერენცია">
+          კონფერენცია
+        </button>
+      </section>
+
+      <!-- კატალოგის Grid -->
+      <section class="events-grid" id="eventsGrid">
+        <div class="event-card">
+          <div
+            class="card-img"
+            style="background-color: #1e293b; height: 160px"
+          ></div>
+          <div class="card-content" style="padding: 20px">
+            <span
+              class="badge"
+              style="
+                background: #0284c7;
+                color: #fff;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 0.75rem;
+              "
+              >ჰაკათონი</span
+            >
+            <h3 style="margin: 15px 0 10px 0; color: #f8fafc">
+              AI & Future Hackathon
+            </h3>
+            <p
+              class="date"
+              style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px"
+            >
+              📅 2026-05-01 | 📍 ონლაინ
+            </p>
+            <div
+              class="card-footer"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid #334155;
+                padding-top: 15px;
+              "
+            >
+              <span class="price" style="color: #34d399; font-weight: bold"
+                >უფასო</span
+              >
+              <button
+                class="book-btn"
+                style="
+                  background: #38bdf8;
+                  color: #0f172a;
+                  border: none;
+                  padding: 8px 16px;
+                  border-radius: 6px;
+                  font-weight: bold;
+                  cursor: pointer;
+                "
+              >
+                არჩევა
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

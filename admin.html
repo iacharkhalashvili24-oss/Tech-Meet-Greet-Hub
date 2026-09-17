@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Meet & Greet Hub - ადმინ პანელი</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🔧 ადმინ პანელი</h1>
+      <p>
+        <a href="index.html" style="color: #38bdf8; text-decoration: none"
+          >← მთავარ გვერდზე დაბრუნება</a
+        >
+      </p>
+    </header>
+
+    <main class="container" style="max-width: 600px">
+      <div
+        style="
+          background-color: #1e293b;
+          padding: 30px;
+          border-radius: 12px;
+          border: 1px solid #334155;
+        "
+      >
+        <h2 style="margin-bottom: 20px; color: #f8fafc">
+          ახალი ივენთის დამატება
+        </h2>
+
+        <form id="addEventForm">
+          <div style="margin-bottom: 15px">
+            <label style="display: block; margin-bottom: 5px; color: #94a3b8"
+              >ივენთის სათაური:</label
+            >
+            <input
+              type="text"
+              id="eventTitle"
+              placeholder="მაგ: DevOps Masterclass"
+              style="
+                width: 100%;
+                padding: 10px;
+                background: #0f172a;
+                border: 1px solid #334155;
+                color: #fff;
+                border-radius: 6px;
+              "
+            />
+          </div>
+
+          <div style="margin-bottom: 15px">
+            <label style="display: block; margin-bottom: 5px; color: #94a3b8"
+              >კატეგორია:</label
+            >
+            <select
+              id="eventCategory"
+              style="
+                width: 100%;
+                padding: 10px;
+                background: #0f172a;
+                border: 1px solid #334155;
+                color: #fff;
+                border-radius: 6px;
+              "
+            >
+              <option value="ჰაკათონი">ჰაკათონი</option>
+              <option value="ვორქშოფი">ვორქშოფი</option>
+              <option value="კონფერენცია">კონფერენცია</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom: 15px">
+            <label style="display: block; margin-bottom: 5px; color: #94a3b8"
+              >ქალაქი / ფორმატი:</label
+            >
+            <input
+              type="text"
+              id="eventCity"
+              placeholder="მაგ: თბილისი / ონლაინ"
+              style="
+                width: 100%;
+                padding: 10px;
+                background: #0f172a;
+                border: 1px solid #334155;
+                color: #fff;
+                border-radius: 6px;
+              "
+            />
+          </div>
+
+          <div style="margin-bottom: 15px">
+            <label style="display: block; margin-bottom: 5px; color: #94a3b8"
+              >თარიღი:</label
+            >
+            <input
+              type="date"
+              id="eventDate"
+              style="
+                width: 100%;
+                padding: 10px;
+                background: #0f172a;
+                border: 1px solid #334155;
+                color: #fff;
+                border-radius: 6px;
+              "
+            />
+          </div>
+
+          <div style="margin-bottom: 20px">
+            <label style="display: block; margin-bottom: 5px; color: #94a3b8"
+              >ფასი (₾):</label
+            >
+            <input
+              type="number"
+              id="eventPrice"
+              placeholder="0 თუ უფასოა"
+              style="
+                width: 100%;
+                padding: 10px;
+                background: #0f172a;
+                border: 1px solid #334155;
+                color: #fff;
+                border-radius: 6px;
+              "
+            />
+          </div>
+
+          <button
+            type="submit"
+            style="
+              width: 100%;
+              background-color: #38bdf8;
+              color: #0f172a;
+              border: none;
+              padding: 12px;
+              border-radius: 6px;
+              font-weight: bold;
+              cursor: pointer;
+            "
+          >
+            ივენთის დამატება
+          </button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
