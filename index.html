@@ -25,18 +25,14 @@
         <button class="filter-btn active" data-filter="all">ყველა</button>
         <button class="filter-btn" data-filter="ჰაკათონი">ჰაკათონი</button>
         <button class="filter-btn" data-filter="ვორქშოფი">ვორქშოფი</button>
-        <button class="filter-btn" data-filter="კონფერენცია">
-          კონფერენცია
-        </button>
+        <button class="filter-btn" data-filter="კონფერენცია">კონფერენცია</button>
       </section>
 
-      <!-- კატალოგის Grid -->
+      <!-- ღონისძიებების ბადე -->
       <section class="events-grid" id="eventsGrid">
+        <!-- ბარათები იტვირთება დინამიკურად events.json-დან -->
         <div class="event-card">
-          <div
-            class="card-img"
-            style="background-color: #1e293b; height: 160px"
-          ></div>
+          <div style="background-color: #1e293b; height: 160px"></div>
           <div class="card-content" style="padding: 20px">
             <span
               class="badge"
@@ -90,5 +86,48 @@
         </div>
       </section>
     </main>
+
+    <!-- AI Chat Widget HTML -->
+    <div class="ai-chat-widget">
+      <div class="ai-chat-box" id="aiChatBox">
+        <div style="background: #0284c7; padding: 12px 16px; color: #fff; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+          <span>🤖 Tech Hub AI ასისტენტი</span>
+          <button onclick="toggleAIChat()" style="background: none; border: none; color: #fff; font-size: 16px; cursor: pointer;">✕</button>
+        </div>
+        <div style="flex: 1; padding: 12px; overflow-y: auto; color: #cbd5e1; font-size: 14px;" id="aiChatMessages">
+          გამარჯობა! მე ვარ შენი AI ასისტენტი. რითი დაგეხმარო „Tech Meet & Greet Hub“-ის ღონისძიებებთან დაკავშირებით?
+        </div>
+        <div style="padding: 10px; border-top: 1px solid rgba(56, 189, 248, 0.2); display: flex; gap: 6px;">
+          <input type="text" id="aiUserInput" placeholder="საკითხი ან კითხვა..." style="flex: 1; background: #0f172a; border: 1px solid rgba(56, 189, 248, 0.3); padding: 8px 12px; border-radius: 8px; color: #fff; font-size: 13px; outline: none;" />
+          <button onclick="sendAIMessage()" style="background: #38bdf8; color: #0f172a; border: none; padding: 8px 14px; border-radius: 8px; font-weight: bold; cursor: pointer;">გაგზავნა</button>
+        </div>
+      </div>
+      <button class="ai-chat-btn" onclick="toggleAIChat()">
+        <span>🤖</span> AI კითხვები
+      </button>
+    </div>
+
+    <script>
+      function toggleAIChat() {
+        const box = document.getElementById('aiChatBox');
+        box.classList.toggle('active');
+      }
+
+      function sendAIMessage() {
+        const input = document.getElementById('aiUserInput');
+        const messages = document.getElementById('aiChatMessages');
+        if (!input.value.trim()) return;
+
+        messages.innerHTML += `<div style="margin-bottom: 8px; text-align: right;"><span style="background: #0284c7; color: #fff; padding: 6px 10px; border-radius: 8px; display: inline-block;">${input.value}</span></div>`;
+        
+        const userText = input.value;
+        input.value = '';
+
+        setTimeout(() => {
+          messages.innerHTML += `<div style="margin-bottom: 8px; text-align: left;"><span style="background: #1e293b; color: #38bdf8; padding: 6px 10px; border-radius: 8px; display: inline-block; border: 1px solid rgba(56,189,248,0.2);">მესმის შენი! „${userText}“-თან დაკავშირებით უახლოეს ვორქშოფებზე ინფორმაციას მალე მოგაწვდი.</span></div>`;
+          messages.scrollTop = messages.scrollHeight;
+        }, 600);
+      }
+    </script>
   </body>
 </html>
