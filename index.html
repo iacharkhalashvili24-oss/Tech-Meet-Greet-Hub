@@ -128,6 +128,176 @@
           messages.scrollTop = messages.scrollHeight;
         }, 600);
       }
+    </script><!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Meet & Greet Hub | მომავლის კოდი</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tech Meet & Greet Hub</h1>
+      <p>შექმნილია გუნდ „მომავლის კოდის“ მიერ 🚀</p>
+      <p>
+        <a
+          href="admin.html"
+          style="color: #38bdf8; text-decoration: none; font-size: 0.9rem"
+          >⚙️ ადმინ პანელში გადასვლა</a
+        >
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- ფილტრების ვიზუალური UI -->
+      <section class="filters">
+        <button class="filter-btn active" data-filter="all">ყველა</button>
+        <button class="filter-btn" data-filter="ჰაკათონი">ჰაკათონი</button>
+        <button class="filter-btn" data-filter="ვორქშოფი">ვორქშოფი</button>
+        <button class="filter-btn" data-filter="კონფერენცია">კონფერენცია</button>
+      </section>
+
+      <!-- ღონისძიებების ბადე -->
+      <section class="events-grid" id="eventsGrid">
+        <div class="event-card">
+          <div style="background-color: #1e293b; height: 160px"></div>
+          <div class="card-content" style="padding: 20px">
+            <span
+              class="badge"
+              style="
+                background: #0284c7;
+                color: #fff;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 0.75rem;
+              "
+              >ჰაკათონი</span
+            >
+            <h3 style="margin: 15px 0 10px 0; color: #f8fafc">
+              AI & Future Hackathon
+            </h3>
+            <p
+              class="date"
+              style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px"
+            >
+              📅 2026-05-01 | 📍 ონლაინ
+            </p>
+            <div
+              class="card-footer"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid #334155;
+                padding-top: 15px;
+              "
+            >
+              <span class="price" style="color: #34d399; font-weight: bold"
+                >უფასო</span
+              >
+              <button
+                class="book-btn"
+                style="
+                  background: #38bdf8;
+                  color: #0f172a;
+                  border: none;
+                  padding: 8px 16px;
+                  border-radius: 6px;
+                  font-weight: bold;
+                  cursor: pointer;
+                "
+              >
+                არჩევა
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PHOTO GALLERY SECTION -->
+    <section class="gallery-section" style="padding: 60px 0; background-color: #0f172a; border-top: 1px solid #1e293b; margin-top: 40px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h2 style="color: #f8fafc; text-align: center; font-size: 2.2rem; margin-bottom: 10px;">📸 ჰაკათონებისა და ვორქშოფების მომენტები</h2>
+            <p style="color: #94a3b8; text-align: center; margin-bottom: 40px; font-size: 1rem;">გაიხსენე ჩვენი წარსული ღონისძიებების ატმოსფერო და ენერგია</p>
+            
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                
+                <!-- სურათი 1 -->
+                <div class="gallery-item" style="background: #1e293b; border-radius: 12px; overflow: hidden; border: 1px solid rgba(56,189,248,0.2); box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="გუნდური მუშაობა" style="width: 100%; height: 220px; object-fit: cover; display: block;">
+                    <div style="padding: 15px;">
+                        <span style="color: #38bdf8; font-size: 0.8rem; font-weight: bold;">ჰაკათონი</span>
+                        <h4 style="color: #f8fafc; margin: 5px 0 0 0; font-size: 1.1rem;">ინოვაციური იდეების გენერაცია</h4>
+                    </div>
+                </div>
+                
+                <!-- სურათი 2 -->
+                <div class="gallery-item" style="background: #1e293b; border-radius: 12px; overflow: hidden; border: 1px solid rgba(56,189,248,0.2); box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="ვორქშოფი" style="width: 100%; height: 220px; object-fit: cover; display: block;">
+                    <div style="padding: 15px;">
+                        <span style="color: #34d399; font-size: 0.8rem; font-weight: bold;">ვორქშოფი</span>
+                        <h4 style="color: #f8fafc; margin: 5px 0 0 0; font-size: 1.1rem;">პრაქტიკული ლაბორატორია</h4>
+                    </div>
+                </div>
+                
+                <!-- სურათი 3 -->
+                <div class="gallery-item" style="background: #1e293b; border-radius: 12px; overflow: hidden; border: 1px solid rgba(56,189,248,0.2); box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" alt="კონფერენცია" style="width: 100%; height: 220px; object-fit: cover; display: block;">
+                    <div style="padding: 15px;">
+                        <span style="color: #fbbf24; font-size: 0.8rem; font-weight: bold;">კონფერენცია</span>
+                        <h4 style="color: #f8fafc; margin: 5px 0 0 0; font-size: 1.1rem;">ტექნოლოგიური სამიტი</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chat Widget HTML -->
+    <div class="ai-chat-widget">
+      <div class="ai-chat-box" id="aiChatBox">
+        <div style="background: #0284c7; padding: 12px 16px; color: #fff; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+          <span>🤖 Tech Hub AI ასისტენტი</span>
+          <button onclick="toggleAIChat()" style="background: none; border: none; color: #fff; font-size: 16px; cursor: pointer;">✕</button>
+        </div>
+        <div style="flex: 1; padding: 12px; overflow-y: auto; color: #cbd5e1; font-size: 14px;" id="aiChatMessages">
+          გამარჯობა! მე ვარ შენი AI ასისტენტი. რითი დაგეხმარო „Tech Meet & Greet Hub“-ის ღონისძიებებთან დაკავშირებით?
+        </div>
+        <div style="padding: 10px; border-top: 1px solid rgba(56, 189, 248, 0.2); display: flex; gap: 6px;">
+          <input type="text" id="aiUserInput" placeholder="საკითხი ან კითხვა..." style="flex: 1; background: #0f172a; border: 1px solid rgba(56, 189, 248, 0.3); padding: 8px 12px; border-radius: 8px; color: #fff; font-size: 13px; outline: none;" />
+          <button onclick="sendAIMessage()" style="background: #38bdf8; color: #0f172a; border: none; padding: 8px 14px; border-radius: 8px; font-weight: bold; cursor: pointer;">გაგზავნა</button>
+        </div>
+      </div>
+      <button class="ai-chat-btn" onclick="toggleAIChat()">
+        <span>🤖</span> AI კითხვები
+      </button>
+    </div>
+
+    <script>
+      function toggleAIChat() {
+        const box = document.getElementById('aiChatBox');
+        box.classList.toggle('active');
+      }
+
+      function sendAIMessage() {
+        const input = document.getElementById('aiUserInput');
+        const messages = document.getElementById('aiChatMessages');
+        if (!input.value.trim()) return;
+
+        messages.innerHTML += `<div style="margin-bottom: 8px; text-align: right;"><span style="background: #0284c7; color: #fff; padding: 6px 10px; border-radius: 8px; display: inline-block;">${input.value}</span></div>`;
+        
+        const userText = input.value;
+        input.value = '';
+
+        setTimeout(() => {
+          messages.innerHTML += `<div style="margin-bottom: 8px; text-align: left;"><span style="background: #1e293b; color: #38bdf8; padding: 6px 10px; border-radius: 8px; display: inline-block; border: 1px solid rgba(56,189,248,0.2);">მესმის შენი! „${userText}“-თან დაკავშირებით უახლოეს ვორქშოფებზე ინფორმაციას მალე მოგაწვდი.</span></div>`;
+          messages.scrollTop = messages.scrollHeight;
+        }, 600);
+      }
     </script>
+  </body>
+</html>
   </body>
 </html>
